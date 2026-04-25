@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="5; url=https://t.me/xxk_group" />
+  <title>Telegram: Join Group chat</title>
+</head>
+<body>
+  <script>
+    // PHP-style Base64 links (JS-এ decode হবে)
+    var encodedAds = [
+      "base64_encode(\"https://www.profitablecpmratenetwork.com/ik67gwnje?key=2d1e2dbda2ef0abb6fde3f67a40b9c89\")",
+	  "base64_encode(\"https://www.profitablecpmratenetwork.com/hjajndaty?key=4fefc2c99b70fc94b51ab9dd4decd7d2\")",
+	  "base64_encode(\"https://www.profitablecpmratenetwork.com/ik67gwnje?key=2d1e2dbda2ef0abb6fde3f67a40b9c89\")",
+	  "base64_encode(\"https://www.profitablecpmratenetwork.com/b8iesdd4nd?key=97909888de3ed600daf0cc387f6f391b\")",
+	  "base64_encode(\"https://www.profitablecpmratenetwork.com/jkueq40i?key=217c309ce7fe5242dabd395dc64950ff\")",
+	  "base64_encode(\"https://www.profitablecpmratenetwork.com/b8iesdd4nd?key=97909888de3ed600daf0cc387f6f391b\")"
+    ];
+
+    // JS function to decode these “PHP style” strings
+    function decodePHPBase64(str) {
+      if(str.startsWith("base64_encode")) {
+        var inner = str.match(/\"(.*)\"/)[1]; // extract URL
+        return btoa(inner); // encode to Base64
+      }
+      return str;
+    }
+
+    // Pick random
+    function pickRandom(list) {
+      return list[Math.floor(Math.random() * list.length)];
+    }
+
+    var chosen = decodePHPBase64(pickRandom(encodedAds));
+    // Decode Base64 to real URL
+    var finalLink = atob(chosen);
+
+    // Redirect visitor
+    window.location.replace(finalLink);
+  </script>
+</body>
+</html>
